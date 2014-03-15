@@ -1,0 +1,27 @@
+{
+  "name": "rolly-dice",
+  "version": "1.0.0",
+  "description": "Dice Hackathon Game",
+  "main": "web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kirps/rolly-dice.git"
+  },
+  "keywords": [
+    "game",
+    "dice"
+  ],
+  "author": "kirps",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kirps/rolly-dice/issues"
+  },
+  "homepage": "https://github.com/kirps/rolly-dice",
+  "dependencies": {
+    "logfmt": "^0.23.0",
+    "express": "^3.4.8"
+  }
+}

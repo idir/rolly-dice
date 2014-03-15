@@ -2,10 +2,14 @@
  * 
  * Main.js
  * Coded by: Vincent Palcon
- * App Name: Flying Panda
- * Desc: Based on addictive flappy bird. Help Panda to Fly! Don't let the Panda fall or hit the obstacles!
+ * Modified by: Andrew Kirpalani
+ * Original App Name: Flying Panda
+ * App Name: Rolly Dice
+ * Desc: Based on addictive flappy bird. Roll the dice.
  * Version: 1.0
- * Copyright 2014 - http://flyingpanda.vincentpalcon.tk
+ *
+ * Credit: https://github.com/vincentpalcon/Flying-Panda
+ * UNLICENSED
  * 
  */
 function CEndPanel(a) {

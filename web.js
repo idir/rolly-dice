@@ -5,7 +5,7 @@ var fs = require('fs');
 
 var app = express.createServer(express.logger());
 app.use(express.static(process.env.PWD));
-app.use(express.static(process.env.PWD+'/client'));
+// app.use(express.static(process.env.PWD+'/client'));
 
 app.use(logfmt.requestLogger());
 

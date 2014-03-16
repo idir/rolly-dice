@@ -75,7 +75,14 @@ function CEndPanel(a) {
         }, 500).call(function () {
             m._initListener()
         });
-        $(s_oMain).trigger("save_score", a, d)
+        $(s_oMain).trigger("save_score", a, d);
+
+        // $.fancybox.open("http://www.dumpaday.com/wp-content/uploads/2013/02/a-gordon-ramsay-meme-dumpaday-19.jpg");
+        $.fancybox.open({
+            href: "test.html",
+            type: "iframe"
+        });
+
     };
     this._onExit = function () {
         l.off("mousedown", this._onExit);

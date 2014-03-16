@@ -104,9 +104,19 @@ function CEndPanel(a) {
 
     this.createResult = function (data) {
 
+        //ajax request for the fancybox, hackalicious
         $.ajax("test.html").done(function( rawTpl ) {
+
             console.log(data);
-            data.searchResults = data.searchResults.slice(0,5);
+            var rand = Math.floor((Math.random()*data.searchResults.length)+1);
+            console.log(rand);
+
+            if(rand>data.searchResults.length+4){
+                console.log("NORMALIZED")
+                rand = 0;
+            }
+
+            data.searchResults = data.searchResults.slice(rand, rand+5);
 
             var template = Handlebars.compile(rawTpl);
             var html = template(data);

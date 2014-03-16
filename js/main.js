@@ -12,6 +12,9 @@
  * UNLICENSED
  * 
  */
+
+//end panel is where we change to show the jobbies
+//
 function CEndPanel(a) {
     var d, b, c, h, g, f, e, l;
     this._init = function (a) {

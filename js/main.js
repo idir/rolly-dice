@@ -77,18 +77,44 @@ function CEndPanel(a) {
         });
         $(s_oMain).trigger("save_score", a, d);
 
-        // $.fancybox.open("http://www.dumpaday.com/wp-content/uploads/2013/02/a-gordon-ramsay-meme-dumpaday-19.jpg");
-        $.fancybox.open({
-            href: "test.html",
-            type: "iframe"
+        //super hacky times
+        var key = "7fcba57524d913314bda16a2ca28fb8e85d90d9b736ac8ca1f2d37d6c4d6eda266102ae24ad43da80c57e13504e60a4d9cab83b1b68379f22ca3b73569729882";
+        var authHeader = "apiKey "+key;
+
+        $.ajax({
+            url:"https://api.dice.com/jobs",
+            data: {fields: "webUrl, position", q: "moines"},
+            type: "GET",
+            beforeSend: function(xhr) {xhr.setRequestHeader('Authorization', authHeader);},
+            success: function(data) {
+                data.messageText = TEXT_GAMEOVER;
+                data.scoreMessageText = TEXT_SCORE+ ": " + a;
+                data.bestScoreMessageText = TEXT_BEST_SCORE + ": " + d;
+                createResult(data); 
+            }
         });
 
     };
+
     this._onExit = function () {
         l.off("mousedown", this._onExit);
         s_oStage.removeChild(l);
         s_oGame.onRestartGame()
     };
+
+    this.createResult = function (data) {
+
+        $.ajax("test.html").done(function( rawTpl ) {
+            console.log(data);
+            data.searchResults = data.searchResults.slice(0,5);
+
+            var template = Handlebars.compile(rawTpl);
+            var html = template(data);
+
+            $.fancybox.open(html);
+        }); 
+    };
+
     this._init(a);
     return this
 }

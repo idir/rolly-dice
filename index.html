@@ -14,8 +14,13 @@
         <!--script type="text/javascript" src="js/jquery-2.0.3.min.js"></script-->
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 
+        <link rel-"stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.1/jquery.mobile.css" type="text/css" media="screen" />
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.1/jquery.mobile.min.js"></script>
+
         <link rel="stylesheet" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
         <script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+        <script type="text/javascript" src="js/handlebars-v1.3.0.js"></script>                
         
         <script type="text/javascript" src="js/createjs-2014.03.12.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
@@ -42,7 +47,10 @@
                      $(".fancybox").fancybox();
            });
         </script>
-       
-        <canvas id="canvas" class='ani_hack' width="768" height="1024"> </canvas>   
+        <div data-role="page">
+            <div role="main" class"ui-content">
+                <canvas id="canvas" class='ani_hack' width="768" height="1024"> </canvas>   
+            </div>
+        </div>
     </body>
 </html>

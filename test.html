@@ -1,1 +1,19 @@
-other testy things
+<div data-role="page">
+    <div role="main">
+        <img src="http://assets.dice.com/assets/stylesheets/images/DiceSmLogo.png"/>
+        <br/>
+        <h1>{{messageText}}</h1>
+        <p>{{scoreMessageText}}</p>
+        <p>{{bestScoreMessageText}}</p>
+        <br/>
+        <p>You're not very good at this game...</p>
+        <p>Maybe you should get a job instead.</p>
+        <br/>
+        <ul data-role="listview">
+            {{#each searchResults}}
+
+            <li><a href="{{webUrl}}">{{position.title}}</a></li>
+            {{/each}}
+        </ul>
+    <div>
+<div>

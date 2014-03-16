@@ -73,7 +73,7 @@ function CEndPanel(a) {
         createjs.Tween.get(l).to({
             alpha: 1
         }, 500).call(function () {
-            m._initListener()
+            m._initListener();
         });
         $(s_oMain).trigger("save_score", a, d);
 
